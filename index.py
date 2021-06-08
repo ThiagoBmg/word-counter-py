@@ -28,8 +28,10 @@ from operator import itemgetter
 for d in range(len(s_palavras)):
 	sd.append((s_palavras[d],quantidade[d]))
 
+# ordenando a lista de acordo com a quantidade
 tmp = sorted(sd, key=itemgetter(1), reverse=True)
 
+# mostrando os tops no range definido abaixo
 for i in range(0,100):
 	print('{} {}: {}'.format('Top:', i+1 , tmp[i][0]))
 
